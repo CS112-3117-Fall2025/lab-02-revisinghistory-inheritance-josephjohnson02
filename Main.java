@@ -48,7 +48,8 @@ public class Main {
 		System.out.println("REVISED HISTORICAL EVENT EXAMPLE:");
 		System.out.println("====================================================");
 		columbusTruth.teach();
-
+		
+		/* 
 		// equals() tests
 		System.out.println("\n\nequals() method tests:");
 		System.out.print("Are the Tulsa and Colombus events the same? ");
@@ -71,5 +72,10 @@ public class Main {
 		} else {
 			System.out.println("No.");
 		}
+
+		// getter tests
+		System.out.println("\n\ngetter tests:");
+		System.out.println(columbusTruth.getDescription()); //the getter from the super class works!
+		*/
 	}
 }
