@@ -24,6 +24,16 @@ public class RevisedHistoricalEvent extends HistoricalEvent {
     {
         return this.citation;
     }
+
+    public void setRevisedDescription(String revisedDescription)
+    {
+        this.revisedDescription = revisedDescription;
+    }
+
+    public void setCitation(String citation)
+    {
+        this.citation = citation;
+    }
     
     public void teach()
     {
