@@ -26,5 +26,50 @@ public class Main {
 		System.out.println("REVISED HISTORICAL EVENT EXAMPLE:");
 		System.out.println("====================================================");
 		tulsaMassacre.teach();
+
+		// My own object
+		System.out.println("\n\n\nMy own example below:\n\n\n");
+
+		String columbusDescription = "Christopher Columbus is a heroic discoverer of the Americas, the first European to visit the \"New World\" as it was called. His first voyage took place in 1492, and he was widely believed to have nobly established peaceful relations with the native population, who welcomed him with open arms.";
+		Date columbusDay = new Date(10, 12, 1492);
+		String columbusRevised = "While Christopher Columbus' journeys indeed lead to widespread European exploration, the true story reveals that his encounters with the indigenous peoples of the Americas were violent and exploitative. His journeys resulted in centuries of decimation and colonization of North and South America. Furthermore, Columbus was not the first European to visit the \"New World.\" Viking sailors, such as Leif Erikson, had already reached the Americas in the 11th century, centuries before Columbus.",
+				columbusCitation = "https://www.history.com/articles/christopher-columbus";
+
+		HistoricalEvent columbusDiscovery = new HistoricalEvent(columbusDescription, columbusDay);
+		RevisedHistoricalEvent columbusTruth = new RevisedHistoricalEvent(columbusDescription, columbusDay,
+				columbusRevised, columbusCitation);
+
+		System.out.println("====================================================");
+		System.out.println("HISTORICAL EVENT EXAMPLE:");
+		System.out.println("====================================================");
+		System.out.println(columbusDiscovery);
+
+		System.out.println("\n====================================================");
+		System.out.println("REVISED HISTORICAL EVENT EXAMPLE:");
+		System.out.println("====================================================");
+		columbusTruth.teach();
+
+		// equals() tests
+		System.out.println("\n\nequals() method tests:");
+		System.out.print("Are the Tulsa and Colombus events the same? ");
+		if (columbusDiscovery.equals(tulsaRiot)) {
+			System.out.println("Yes.");
+		} else {
+			System.out.println("No.");
+		}
+
+		System.out.print("Are the Colombus and Colombus events the same? ");
+		if (columbusDiscovery.equals(columbusDiscovery)) {
+			System.out.println("Yes.");
+		} else {
+			System.out.println("No.");
+		}
+
+		System.out.print("Are the Colombus and Revised Colombus events the same? ");
+		if (columbusDiscovery.equals(columbusTruth)) {
+			System.out.println("Yes.");
+		} else {
+			System.out.println("No.");
+		}
 	}
 }

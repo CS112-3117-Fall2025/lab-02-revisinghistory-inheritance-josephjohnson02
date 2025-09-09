@@ -9,24 +9,42 @@ public class RevisedHistoricalEvent extends HistoricalEvent {
 
     public RevisedHistoricalEvent(String description, Date eventDate, String revisedDescription, String citation)
     {
+        this.description = description;
+        this.eventDate = eventDate;
+        this.revisedDescription = revisedDescription;
+        this.citation = citation;
+    }
 
+    public String getRevisedDescription()
+    {
+        return this.revisedDescription;
+    }
+
+    public String getCitation()
+    {
+        return this.citation;
     }
     
-    public String teach()
+    public void teach()
     {
-        return "";
+        System.out.println(this.toString());
     }
     
     @Override
     public String toString()
     {
         String formattedString = "On " + eventDate.toString() + ": " + getDescription();
-        return "The following \"history\" was told for many years:\n\n" + formattedString + "By correcting history, not just rewriting it, we are revising it to embark on the process of righting a wrong.\nHere is the revised history:\n" + revisedDescription;
+        return "The following \"history\" was told for many years:\n\n" + formattedString + "\n\nBy correcting history, not just rewriting it, we are revising it to embark on the process of righting a wrong.\nHere is the revised history:\n" + revisedDescription + "\n\nSource: " + citation;
     }
 
     @Override
     public boolean equals()
     {
-        return true;
+        if (this.description.equals(description) && this.eventDate.equals(eventDate)
+        && this.revisedDescription.equals(revisedDescription) && this.citation.equals(citation))
+        {
+            return true;
+        }
+        return false;
     }
 }
